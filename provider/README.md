@@ -37,7 +37,7 @@ Response:
 | `start_point` | Point | Required | Must be in WGS 84 (EPSG:4326) standard GPS projection | 
 | `end_point` | Point | Required | Must be in WGS 84 (EPSG:4326) standard GPS projection | 
 | `accuracy` | Integer | Required | The approximate level of accuracy, in meters, represented by start_point and end_point. |
-| `route` | Line | Optional | | 
+| `route` | Array of Points with UNIX Timestamps | Optional | | 
 | `sample_rate` | Integer | Optional | The frequency, in seconds, in which the route is sampled | 
 | `device_id` | UUID | Required | | 
 | `start_time` | Unix Timestamp | Required | | 
