@@ -16,6 +16,7 @@ This specification contains a data standard for *mobility as a service* provider
 * [Trips](#trips)
 * [Availability](#availability)
 * [Service Areas](#service-areas)
+* [Examples](#examples)
 
 ## Trips
 
@@ -98,7 +99,7 @@ Trip endpoint:
 {
     "company_name": "ScooterCompany",
     "device_type": "scooter",
-    "trip_id": 107384,
+    "trip_id": "7ee01a8a-2dc9-47aa-8ad6-edf854fd8388",
     "trip_duration": 124.86813232663945,
     "trip_distance": 321.4725293065578,
     "start_point": {
@@ -134,7 +135,7 @@ Trip endpoint:
     },
     "sample_rate": 60,
     "accuracy": 5,
-    "device_id": 8745531,
+    "device_id": "184ba280-4c6f-41a9-853f-8c2c997b357f",
     "start_time": 1529968782.421409,
     "end_time": 1529968907.289541,
     "parking_verification": "urlhere",
@@ -142,3 +143,57 @@ Trip endpoint:
     "actual_cost": 1.15
 }
 ```
+
+Availability endpoint:
+
+```
+{
+    "company_name": "ScooterCompany",
+    "device_type": "scooter",
+    "device_id": "184ba280-4c6f-41a9-853f-8c2c997b357f",
+    "availability_start_time": 1529968907.289541,
+    "availability_end_time": 1529968345.345325,
+    "placement_reason": "user_drop_off"
+    "allowed_placement": true
+    "pickup_reason": "user_pick_up"
+}
+```
+
+Service Area endpoint:
+
+```
+{
+    "operator_name": "ScooterCompany",
+    "service_start_date": 1533128400.0,
+    "service_end_date": 1535796000.0,
+    "service_area": {
+        "type": "MultiPolygon",
+        "coordinates": [
+            [
+                [
+                    -118.47793579101561,
+                    33.99176508196857
+                ],
+                [
+                    -118.47081184387206,
+                    33.98415021813989
+                ],
+                [
+                    -118.45767974853514,
+                    33.99162275432302
+                ],
+                [
+                    -118.28390999909007,
+                    34.063582999985535
+                ],
+                [
+                    -118.2830799995123,
+                    34.063214999434024
+                ]
+	    ]
+        ]
+    },
+    "service_area_id": "1dc76b0c-fe95-4b10-9f65-623646b08508"
+}
+```
+   
