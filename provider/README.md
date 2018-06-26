@@ -90,3 +90,55 @@ Response:
 | `prior_service_area` | UUID | Optional | If exists, the UUID of the prior service area. | 
 | `replacement_service_area` | UUID | Optional | If exists, the UUID of the service area that replaced this one | 
 
+## Examples
+
+Trip endpoint:
+
+```
+{
+    "company_name": "ScooterCompany",
+    "device_type": "scooter",
+    "trip_id": 107384,
+    "trip_duration": 124.86813232663945,
+    "trip_distance": 321.4725293065578,
+    "start_point": {
+        "type": "Point",
+        "coordinates": [
+            -118.46416532993315,
+            33.99017277784858
+        ] 
+    },
+    "end_point": {
+        "type": "Point",
+        "coordinates": [
+            -118.46710503101347,
+            33.9909333514159
+        ]
+    },
+    "route": {
+        "type": "LineString",
+        "coordinates" : [
+            [
+                -118.46416264772414,
+                33.99018612130317
+            ],
+            [
+                -118.46598118543626,
+                33.99065981258349
+            ],
+            [
+                -118.46710503101347,
+                33.99093557530522
+            ]
+        ]
+    },
+    "sample_rate": 60,
+    "accuracy": 5,
+    "device_id": 8745531,
+    "start_time": 1529968782.421409,
+    "end_time": 1529968907.289541,
+    "parking_verification": "urlhere",
+    "standard_cost": 0.01,
+    "actual_cost": 1.15
+}
+```
